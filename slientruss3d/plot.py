@@ -5,8 +5,7 @@ from .truss import Truss
 from .utils import Arrow2D, Arrow3D, IsZero, IsZeroVector, MinNorm, SetAxesEqual
 from .type import SupportType
 
-
-plt.style.use("seaborn")
+# plt.style.use("seaborn")
 
 class TrussPlotter:
     def __init__(self, truss: Truss, isDisplaceScale=True, isForceScale=True, isEqualAxis=False, isPlotStress=True,

@@ -318,7 +318,7 @@ class Truss:
     # Get a mask which indicate the indexes of unknown displacement dimensions:
     def GetDisplacementUnknownMask(self):
         dim = self.__dim
-        displaceUnknownMask = np.bool8(np.ones([self.nJoint * dim]))
+        displaceUnknownMask = np.bool(np.ones([self.nJoint * dim]))
         for jointID, (_, supportType) in self.__joints.items():
             mask = SupportType.GetResistanceMask(supportType, dim)
             displaceUnknownMask[jointID * dim: (jointID + 1) * dim] = np.logical_not(mask)
